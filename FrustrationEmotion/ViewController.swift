@@ -36,7 +36,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         rightButton.layer.cornerRadius = 0.5 * rightButton.bounds.size.width
         rightButton.alpha = CGFloat(circleAlpha)
         
-        initButton.layer.cornerRadius = 0.5 * rightButton.bounds.size.width
         initButton.alpha = CGFloat(circleAlpha)
         
         for falseButton in falseButtons{
