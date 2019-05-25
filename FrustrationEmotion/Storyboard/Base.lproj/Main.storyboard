@@ -98,21 +98,21 @@
                                     <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K2f-A2-bab"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZS-LW-cpj">
-                                <rect key="frame" x="175" y="670" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="initBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dna-E0-sYj"/>
-                                    <action selector="rightBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVc-9z-Myk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snT-yX-ov9">
                                 <rect key="frame" x="180" y="329" width="55" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval3 V"/>
                                 <connections>
                                     <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U77-Lz-msU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZS-LW-cpj">
+                                <rect key="frame" x="150" y="670" width="114" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Group"/>
+                                <connections>
+                                    <action selector="initBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dna-E0-sYj"/>
+                                    <action selector="rightBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVc-9z-Myk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -140,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group" width="114" height="108"/>
         <image name="Mbulet" width="66" height="66"/>
         <image name="Oval1 H" width="67" height="47"/>
         <image name="Oval1 V" width="47" height="66"/>

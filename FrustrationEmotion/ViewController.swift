@@ -27,6 +27,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var red: Float = 1.0, green: Float = 0
     var circleAlpha = 1.0
     
+    var initial = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Initial BG Color
@@ -37,6 +39,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         rightButton.alpha = CGFloat(circleAlpha)
         
         initButton.alpha = CGFloat(circleAlpha)
+        
+        rightButton.isHidden = true
         
         for falseButton in falseButtons{
             falseButton.isHidden = true
@@ -49,12 +53,24 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBAction func initBtnPressed(_ sender: UIButton) {
         
-        activateTimer()
-        print(duration)
-        moveRightButton()
+        if initial < 1 {
+            activateTimer()
+            print(duration)
+            moveInitButton()
+            
+            
+            initial += 1
+        }
+
+        else if initial >= 1{
+            
+            rightButton.isHidden = false
+            initButton.alpha = 0
+            
+            moveRightButton()
         
+        }
         
-        initButton.isHidden = true
         
     }
     
@@ -186,6 +202,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         rightButton.alpha = CGFloat(circleAlpha)
         rightButton.frame = CGRect(x: 175, y: 670, width: 64, height: 64)
         
+        initButton.frame = CGRect(x: 150, y: 670, width: 114, height: 108)
+        
         for falseButton in falseButtons{
             UIView.animate(withDuration: 1.0) {
             falseButton.isHidden = true
@@ -247,6 +265,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    
+    func moveInitButton(){
+        red -= 0.1
+        green += 0.1
+        
+        circleAlpha -= 0.07
+        
+        let buttonWidth = initButton.frame.width
+        let buttonHeight = initButton.frame.height
+        let viewWidth = initButton.superview!.bounds.width
+        let viewHeight = initButton.superview!.bounds.height
+        let xwidth = viewWidth - buttonWidth
+        let yheight = viewHeight - buttonHeight
+        let xoffset = CGFloat(arc4random_uniform(UInt32(xwidth)))
+        let yoffset = CGFloat(arc4random_uniform(UInt32(yheight)))
+        initButton.center.x = xoffset + buttonWidth / 2
+        initButton.center.y = yoffset + buttonHeight / 2
+        
+        
+        
+        UIView.animate(withDuration: 1.0) {
+            self.view.backgroundColor = UIColor(red: CGFloat(self.red), green: CGFloat(self.green), blue: 0.0, alpha: 1.0)
+            
+            self.initButton.alpha = CGFloat(self.circleAlpha)
+            
+        }
+    }
 }
 
