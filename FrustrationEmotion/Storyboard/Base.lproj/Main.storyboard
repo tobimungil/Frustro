@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFu-rI-ngv">
-                                <rect key="frame" x="290" y="119" width="64" height="60"/>
+                                <rect key="frame" x="132" y="123" width="64" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval1 V"/>
                                 <connections>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24p-8C-8LZ">
-                                <rect key="frame" x="173" y="230" width="64" height="59"/>
+                                <rect key="frame" x="150" y="180" width="64" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval2 V"/>
                                 <connections>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehc-hh-2FY">
-                                <rect key="frame" x="289" y="230" width="54" height="54"/>
+                                <rect key="frame" x="266" y="101" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval1 H"/>
                                 <connections>
@@ -59,23 +59,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Et-iG-ZzL">
-                                <rect key="frame" x="165" y="116" width="72" height="71"/>
+                                <rect key="frame" x="248" y="198" width="72" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval1 H"/>
                                 <connections>
                                     <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESa-89-AQv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCm-w5-hKV">
-                                <rect key="frame" x="60" y="335" width="64" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Oval3 H"/>
-                                <connections>
-                                    <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqf-hG-JJV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k40-G0-Mdi">
-                                <rect key="frame" x="284" y="321" width="70" height="70"/>
+                                <rect key="frame" x="248" y="285" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval3 V"/>
                                 <connections>
@@ -83,7 +75,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5F-gY-YIB">
-                                <rect key="frame" x="170" y="421" width="55" height="55"/>
+                                <rect key="frame" x="111" y="161" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval3 V"/>
                                 <connections>
@@ -91,7 +83,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJs-fb-yiQ">
-                                <rect key="frame" x="60" y="224" width="64" height="67"/>
+                                <rect key="frame" x="48" y="179" width="63" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval2 H"/>
                                 <connections>
@@ -99,7 +91,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snT-yX-ov9">
-                                <rect key="frame" x="180" y="329" width="55" height="61"/>
+                                <rect key="frame" x="132" y="290" width="55" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval3 V"/>
                                 <connections>
@@ -115,12 +107,29 @@
                                     <action selector="rightBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVc-9z-Myk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G40-q4-a18">
+                                <rect key="frame" x="159" y="400" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="replay"/>
+                                <connections>
+                                    <action selector="resetBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bcf-jj-0by"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCm-w5-hKV">
+                                <rect key="frame" x="39" y="303" width="64" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Oval3 H"/>
+                                <connections>
+                                    <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqf-hG-JJV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93547368050000002" green="0.34116882729999998" blue="0.299124467" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="initButton" destination="tZS-LW-cpj" id="y3T-Jy-Tgq"/>
+                        <outlet property="replayButton" destination="G40-q4-a18" id="qEM-D6-QQ4"/>
                         <outlet property="rightButton" destination="eNU-aW-HY5" id="Rw3-rR-AGK"/>
                         <outletCollection property="falseButtons" destination="UnY-8s-sjd" collectionClass="NSMutableArray" id="oc6-Aq-1Bd"/>
                         <outletCollection property="falseButtons" destination="3Et-iG-ZzL" collectionClass="NSMutableArray" id="xyd-KY-TEt"/>
@@ -148,5 +157,6 @@
         <image name="Oval2 V" width="57" height="66"/>
         <image name="Oval3 H" width="66" height="61"/>
         <image name="Oval3 V" width="61" height="66"/>
+        <image name="replay" width="89" height="89"/>
     </resources>
 </document>

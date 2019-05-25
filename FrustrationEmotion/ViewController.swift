@@ -18,6 +18,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var initButton: UIButton!
     
+    @IBOutlet weak var replayButton: UIButton!
+    
+    
+    
     var audioPlayer =  AVAudioPlayer()
     
     var timer = Timer()
@@ -30,14 +34,17 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     var initial = 0
     
+    let confettiFail = SAConfettiView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        let confettiView = SAConfettiView(frame: self.view.bounds)
-//        confettiView.type = .Diamond
-//        
-//        view.addSubview(confettiView)
-//        confettiView.startConfetti()
+        
+        confettiFail.frame = self.view.bounds
+        
+        
+        
+//        view.addSubview(confettiViewFail)
+//        confettiViewFail.startConfetti()
         
         //Initial BG Color
         self.view.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: 0.0, alpha: 1.0)
@@ -54,10 +61,29 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             falseButton.isHidden = true
         }
         
+        replayButton.alpha = 0
         
         
     }
 
+    
+    
+    @IBAction func resetBtnPressed(_ sender: UIButton) {
+        
+        initial = 0
+        
+        UIView.animate(withDuration: 1.0) {
+            self.initButton.alpha = 1
+            self.replayButton.alpha = 0
+        }
+        
+        setToDefault()
+        confettiFail.stopConfetti()
+        
+        view.sendSubviewToBack(replayButton)
+        view.sendSubviewToBack(confettiFail)
+        
+    }
     
     @IBAction func initBtnPressed(_ sender: UIButton) {
         
@@ -172,10 +198,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         self.timer.invalidate()
         
-        rightButton.alpha = 0
-        for falsebutton in falseButtons{
-            falsebutton.alpha = 0
-        }
+        
+        self.view.addSubview(confettiFail)
+        
+            confettiFail.type = .Image(UIImage(named: "angryface")!)
+        
+            confettiFail.colors = [UIColor.white]
+        
+            confettiFail.startConfetti()
+        
         
         do{
             if let fileURL = Bundle.main.path(forResource: "Boo", ofType: "wav"){
@@ -189,15 +220,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         audioPlayer.play()
         
-        
-        let failAlert = UIAlertController(title: "Failed", message: "", preferredStyle: UIAlertController.Style.alert)
-        
-        failAlert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { _ in
+        UIView.animate(withDuration: 1.0) {
+            self.rightButton.alpha = 0
+            for falsebutton in self.falseButtons{
+            falsebutton.alpha = 0
             
-            self.setToDefault()
-        }))
+        }
+           self.initButton.alpha = 0
+           self.replayButton.alpha = 1
         
-         self.present(failAlert, animated: true, completion: nil)
+        }
+        self.view.addSubview(self.replayButton)
+        
         
     }
     
@@ -234,7 +268,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         red -= 0.1
         green += 0.1
         
-        circleAlpha -= 0.07
+        circleAlpha -= 0.04
         
         let buttonWidth = rightButton.frame.width
         let buttonHeight = rightButton.frame.height
