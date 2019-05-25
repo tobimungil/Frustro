@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SAConfettiView
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
 
@@ -31,6 +32,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        
+//        let confettiView = SAConfettiView(frame: self.view.bounds)
+//        confettiView.type = .Diamond
+//        
+//        view.addSubview(confettiView)
+//        confettiView.startConfetti()
+        
         //Initial BG Color
         self.view.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: 0.0, alpha: 1.0)
         
@@ -112,6 +120,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func congratulationsAlert(){
         print("Congrats")
         
+        rightButton.alpha = 0
+        for falsebutton in falseButtons{
+            falsebutton.alpha = 0
+        }
+        
         self.timer.invalidate()
         
         let congratsAlert = UIAlertController(title: "Congratulations", message: "", preferredStyle: .alert)
@@ -158,6 +171,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func showFailedAlert(){
         
         self.timer.invalidate()
+        
+        rightButton.alpha = 0
+        for falsebutton in falseButtons{
+            falsebutton.alpha = 0
+        }
         
         do{
             if let fileURL = Bundle.main.path(forResource: "Boo", ofType: "wav"){
