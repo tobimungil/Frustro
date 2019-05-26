@@ -35,11 +35,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var initial = 0
     
     let confettiFail = SAConfettiView()
+    let confettiCongrats = SAConfettiView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         confettiFail.frame = self.view.bounds
+        confettiCongrats.frame = self.view.bounds
         
         
         
@@ -79,9 +81,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         setToDefault()
         confettiFail.stopConfetti()
+        confettiCongrats.stopConfetti()
         
         view.sendSubviewToBack(replayButton)
         view.sendSubviewToBack(confettiFail)
+        view.sendSubviewToBack(confettiCongrats)
         
     }
     
@@ -146,20 +150,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func congratulationsAlert(){
         print("Congrats")
         
-        rightButton.alpha = 0
-        for falsebutton in falseButtons{
-            falsebutton.alpha = 0
-        }
-        
         self.timer.invalidate()
         
-        let congratsAlert = UIAlertController(title: "Congratulations", message: "", preferredStyle: .alert)
+        self.view.addSubview(confettiCongrats)
         
-        congratsAlert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: {_ in
-            self.setToDefault()
-        }))
+        confettiCongrats.type = .Confetti
         
-        self.present(congratsAlert, animated: true, completion: nil)
+        confettiCongrats.startConfetti()
         
         do{
             if let fileURL = Bundle.main.path(forResource: "Cheers", ofType: "wav"){
@@ -172,6 +169,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         audioPlayer.play()
+        
+        UIView.animate(withDuration: 1.0) {
+            self.rightButton.alpha = 0
+            for falsebutton in self.falseButtons{
+                falsebutton.alpha = 0
+                
+            }
+            self.initButton.alpha = 0
+            self.replayButton.alpha = 1
+            
+        }
+        self.view.addSubview(self.replayButton)
     }
     
     func activateTimer(){
