@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k40-G0-Mdi">
-                                <rect key="frame" x="248" y="285" width="70" height="70"/>
+                                <rect key="frame" x="172" y="228" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Oval3 V"/>
                                 <connections>
@@ -88,14 +88,6 @@
                                 <state key="normal" backgroundImage="Oval2 H"/>
                                 <connections>
                                     <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K2f-A2-bab"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snT-yX-ov9">
-                                <rect key="frame" x="132" y="290" width="55" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Oval3 V"/>
-                                <connections>
-                                    <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U77-Lz-msU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZS-LW-cpj">
@@ -121,6 +113,14 @@
                                 <state key="normal" backgroundImage="Oval3 H"/>
                                 <connections>
                                     <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqf-hG-JJV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snT-yX-ov9">
+                                <rect key="frame" x="109" y="246" width="55" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Oval3 V"/>
+                                <connections>
+                                    <action selector="falseBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U77-Lz-msU"/>
                                 </connections>
                             </button>
                         </subviews>
